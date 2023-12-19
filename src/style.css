@@ -138,7 +138,15 @@ body {
 
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    text-align: center;
+}
+
+#content p {
+    flex: 1;
+
+    margin: 0.5rem 2rem;
 }
 
 #chef-gif {
@@ -149,4 +157,22 @@ body {
 h1 {
     font-size: 3rem;
     margin: 1rem;
+}
+
+.menu-list {
+    background-color: var(--secondary-color);
+    box-shadow: grey 0.1rem 0.1rem 0.05rem;
+    border-radius: 1rem;
+
+    width: 20rem;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.menu-list li {
+    margin: 1rem 0;
+}
+
+.clickable-image:hover {
+    cursor: pointer;
 }
