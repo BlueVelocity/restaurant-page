@@ -1,5 +1,6 @@
 export default { loadNavbar, loadLandingComponent }
 import utility from './utility';
+import menu from './menuModule'
 import chefImage from './images/landing-page-chef.gif';
 
 function loadNavbar() {
@@ -34,7 +35,7 @@ function navBarComponent() {
         })
     }
 
-    createTabs([loadLandingComponent, 'Landing'], [() => console.log('contact tab working!'), 'Menu'], [() => console.log('contact tab working!'), 'Contact']).forEach(element => navBar.appendChild(element[1]));
+    createTabs([loadLandingComponent, 'Landing'], [menu, 'Menu'], [() => console.log('contact tab working!'), 'Contact']).forEach(element => navBar.appendChild(element[1]));
 
     return [ assignedFunctions, navBar ];
 }
@@ -48,7 +49,7 @@ function landingComponent() {
     headerElement.textContent = 'Spaghettorama!';
 
     const descriptionElement = document.createElement('p');
-    descriptionElement.textContent = utility.randomSelection('This pasta will Mama your Mia!', 'You\'ve Mama\'d your last Mia!', 'It\'s good pasta yo!', 'Arms are heavy...');
+    descriptionElement.textContent = utility.randomSelection(['This pasta will Mama your Mia!', 'You\'ve Mama\'d your last Mia', 'It\'s good pasta yo!', 'Arms are heavy...']);
 
     return [ titleImg, headerElement, descriptionElement ]
 }
