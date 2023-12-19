@@ -9,9 +9,3 @@ function appendElementByID(Id, elements) {
 function clearChildrenByID(Id) {
     document.getElementById(Id).innerHTML = null;
 }
-
-function createElement(tag) {
-    const element = document.createElement(tag);
-
-    return element;
-}
