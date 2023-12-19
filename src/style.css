@@ -159,6 +159,11 @@ h1 {
     margin: 1rem;
 }
 
+h2 {
+    font-size: 2rem;
+    margin: 1rem;
+}
+
 .menu-list {
     background-color: var(--secondary-color);
     box-shadow: grey 0.1rem 0.1rem 0.05rem;

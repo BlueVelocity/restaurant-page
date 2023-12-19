@@ -7,7 +7,7 @@ export default function loadMenuComponent() {
 }
 
 function menuComponent() {
-    const headerElement = document.createElement('h1');
+    const headerElement = document.createElement('h2');
     headerElement.textContent = 'Menu';
 
     const descriptionElement = document.createElement('p');
