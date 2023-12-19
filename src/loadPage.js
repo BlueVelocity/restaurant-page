@@ -1,46 +1,51 @@
-export default { firstLoad, loadLandingPage }
+export default { loadNavbar, loadLandingPage }
 import utility from './utility';
 import chefImage from './images/landing-page-chef.gif';
 
 function firstLoad() {
     console.log('loadPage is working!');
-    document.getElementsByTagName('body')[0].prepend(navBarComponent());
+    ;
     utility.appendElementByID('content', landingComponent());
 }
 
-function loadLandingPage() {
-    utility.clearChildrenByID('content');
+function loadNavbar() {
+    document.getElementsByTagName('body')[0].prepend(navBarComponent()[1])
+    return navBarComponent()[0];
+}
 
-    utility.appendElementByID('content', landingComponent())
+function loadLandingPage() {
+    utility.appendElementByID('content', landingComponent());
 }
 
 function navBarComponent() {
+    let assignedFunctions = [];
+
     const navBar = document.createElement('div');
     navBar.className = 'nav-bar';
 
-    //takes tab text as string and returns tab elements as an array
+    //takes tab info as array [component_function, 'label' | string] and returns array [attached_function, element]
     function createTabs(...args) {
-        return args.map(text => {
+        return args.map(info => {
             const element = document.createElement('button');
             element.className = 'tab';
 
             const tabTitle = document.createElement('p');
-            tabTitle.innerText = text;
+            tabTitle.innerText = info[1];
 
             element.appendChild(tabTitle);
 
-            return element
+            assignedFunctions.push(info[0]);
+
+            return [info[0], element];
         })
     }
 
-    createTabs('Landing', 'Menu', 'Contact').forEach(element => navBar.appendChild(element));
+    createTabs([landingComponent, 'Landing'], [() => console.log('menu tab working!'), 'Menu'], [() => console.log('contact tab working!'), 'Contact']).forEach(element => navBar.appendChild(element[1]));
 
-    return navBar;
+    return [ assignedFunctions, navBar ];
 }
 
 function landingComponent() {
-    utility.clearChildrenByID('content');
-    
     const titleImg = new Image();
     titleImg.src = chefImage;
     titleImg.id = 'chef-gif';
