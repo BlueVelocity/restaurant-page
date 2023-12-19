@@ -1,4 +1,4 @@
-export default { appendElementByID, clearChildrenByID };
+export default { appendElementByID, clearChildrenByID, randomSelection };
 
 //Accepts an Id | string as fist argument, followed by the elements to append as child in array
 function appendElementByID(Id, elements) {
@@ -8,4 +8,17 @@ function appendElementByID(Id, elements) {
 //takes in Id | string and clears innerHTML
 function clearChildrenByID(Id) {
     document.getElementById(Id).innerHTML = null;
+}
+
+//takes items as arguments | any and returns a random item
+function randomSelection(...args) {
+    const randNum = Math.random();
+    const interval = 1/args.length;
+    let selection = args[0];
+    args.forEach((desc, index) => {
+        if ((index * interval) < randNum && randNum < ((index + 1) * interval)) {
+            selection = desc;
+        }
+    });
+    return selection;
 }

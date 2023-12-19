@@ -111,6 +111,11 @@ body {
 }
 
 #chef-gif {
-    width: 15rem;
+    width: 20rem;
     border-radius: 20%;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 1rem;
 }
