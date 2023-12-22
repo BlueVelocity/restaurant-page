@@ -2,7 +2,7 @@ export default { loadNavbar, loadLandingComponent }
 import utility from './utility';
 import menu from './menuModule';
 import contact from './contactModule';
-import chefImage from './images/landing-page-chef.gif';
+import dinerImage from './images/inner_diner.jpeg';
 
 function loadNavbar() {
     document.getElementsByTagName('body')[0].prepend(navBarComponent()[1])
@@ -23,7 +23,12 @@ function navBarComponent() {
     function createTabs(...args) {
         return args.map(info => {
             const element = document.createElement('button');
-            element.className = 'tab';
+
+            if (info[1] === 'Landing') {
+                element.className = 'tab tab-selected';
+            } else {
+                element.className = 'tab';
+            }
 
             const tabTitle = document.createElement('p');
             tabTitle.innerText = info[1];
@@ -42,9 +47,14 @@ function navBarComponent() {
 }
 
 function landingComponent() {
+    const imageContainer = document.createElement('div');
+    imageContainer.classList = 'diner-image-container';
+
     const titleImg = new Image();
-    titleImg.src = chefImage;
-    titleImg.id = 'chef-gif';
+    titleImg.src = dinerImage;
+    titleImg.id = 'diner-image';
+
+    imageContainer.appendChild(titleImg);
 
     const headerElement = document.createElement('h1');
     headerElement.textContent = 'Devil Diner';
@@ -52,5 +62,5 @@ function landingComponent() {
     const descriptionElement = document.createElement('p');
     descriptionElement.textContent = utility.randomSelection(['This pasta will Mama your Mia!', 'You\'ve Mama\'d your last Mia', 'It\'s good pasta yo!', 'Arms are heavy...']);
 
-    return [ titleImg, headerElement, descriptionElement ]
+    return [ imageContainer, headerElement, descriptionElement ]
 }

@@ -63,10 +63,12 @@ table {
     --main-color: #f5f5f5;
     --secondary-color: #e5e5e5;
     --tertiary-color: #404040;
+    --quaternary-color: rgb(129, 26, 26);
     --selection-color: #89982e;
     --hover-color: #a0b133;
     --box-shadow-typ: grey 0.05rem 0.05rem 0.05rem;
-    font-size: min(2vh, 4vw);
+    --width-standard: 25rem;
+    font-size: min(2vh, 3vw);
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
@@ -107,8 +109,8 @@ body {
     font-size: 1rem;
     background-color: var(--secondary-color);
 
-    width: 8rem;
-    height: 3rem;
+    width: 7rem;
+    height: 2.5rem;
 
     margin: 0 1rem;
     border: none;
@@ -117,6 +119,9 @@ body {
 
 .tab-selected {
     background-color: #89982e;
+
+    width: 8rem;
+    height: 3rem;
 }
 
 .tab:hover {
@@ -150,14 +155,33 @@ body {
     margin: 0.5rem 2rem;
 }
 
-#chef-gif {
-    width: 20rem;
-    border-radius: 20%;
+.diner-image-container {
+    position: relative;
+
+    width: var(--width-standard);
+    height: 15rem;
+    border-radius: 1rem;
+
+    overflow: hidden;
+
+    box-shadow: var(--box-shadow-typ);
+}
+
+#diner-image {
+    position: relative;
+    translate: 0 -25%;
+
+    width: 100%;
+    height: auto;
 }
 
 h1 {
+    color: var(--tertiary-color);
+
     font-size: 3rem;
     margin: 1rem;
+
+    text-shadow: -0.05rem 0 var(--quaternary-color), 0 0.05rem var(--quaternary-color), 0.05rem 0 var(--quaternary-color), 0 -0.05rem var(--quaternary-color);
 }
 
 h2 {
@@ -166,13 +190,16 @@ h2 {
 }
 
 .menu-list {
-    background-color: var(--secondary-color);
+    background-color: var(--quaternary-color);
     box-shadow: var(--box-shadow-typ);
     border-radius: 1rem;
 
-    width: 20rem;
+    width: var(--width-standard);
     padding: 1rem;
     margin: 1rem 0;
+    
+    color: var(--secondary-color);
+    text-shadow: -0.05rem 0 black, 0 0.05rem black, 0.05rem 0 black, 0 -0.05rem black;
 }
 
 .menu-list li {
@@ -184,9 +211,35 @@ h2 {
 }
 
 .contact-container {
-    background-color: var(--secondary-color);
-    padding: 0.5rem 0.2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-justify: center;
+
+    width: var(--width-standard);
+    height: 10rem;
+
+    color: var(--secondary-color);
+    text-shadow: -0.05 0 black, 0 0.05 black, 0.05 0 black, 0 -0.05 black;
+
     border-radius: 0.5rem;
     margin-top: 2rem;
+    padding: 1rem 0.5rem;
+    
+
     box-shadow: var(--box-shadow-typ);
+    
+    background: url('./images/spaghetti_devil.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+
+    background-color: black;
+
+    opacity: 0.8;
+}
+
+.lil-devil {
+    width: 10rem;
+    height: auto;
 }

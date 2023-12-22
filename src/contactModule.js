@@ -1,4 +1,5 @@
 import utility from './utility';
+import lilDevil from './images/lil_devil.gif'
 
 export default function loadContactComponent() {
     utility.appendElementByID('content', contactComponent());
@@ -15,16 +16,19 @@ function contactComponent() {
     contactContainer.classList = 'contact-container';
 
     const contactName = document.createElement('p');
-    contactName.textContent = 'Name: Santa'
+    contactName.textContent = 'Name: Santa Spaghetti';
 
     const contactAddress = document.createElement('p');
-    contactAddress.textContent = 'Address: Literally Hell'
+    contactAddress.textContent = 'Address: Literally Hell';
 
     const contactPhone = document.createElement('p');
-    contactPhone.textContent = 'Phone Number: (666) 666-6666'
+    contactPhone.textContent = 'Phone Number: (666) 666-6666';
 
-    utility.appendInMemoryElement(contactContainer, [ contactName, contactAddress, contactPhone ])
-    
+    utility.appendInMemoryElement(contactContainer, [ contactName, contactAddress, contactPhone ]);
 
-    return [ headerElement, subheader, contactContainer ]
+    const img = new Image();
+    img.src = lilDevil;
+    img.classList = 'lil-devil'  ;  
+
+    return [ headerElement, subheader, contactContainer, img ]
 }
