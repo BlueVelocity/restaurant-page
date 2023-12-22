@@ -65,6 +65,7 @@ table {
     --tertiary-color: #404040;
     --selection-color: #89982e;
     --hover-color: #a0b133;
+    --box-shadow-typ: grey 0.05rem 0.05rem 0.05rem;
     font-size: min(2vh, 4vw);
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     box-sizing: border-box;
@@ -166,7 +167,7 @@ h2 {
 
 .menu-list {
     background-color: var(--secondary-color);
-    box-shadow: grey 0.1rem 0.1rem 0.05rem;
+    box-shadow: var(--box-shadow-typ);
     border-radius: 1rem;
 
     width: 20rem;
@@ -180,4 +181,12 @@ h2 {
 
 .clickable-image:hover {
     cursor: pointer;
+}
+
+.contact-container {
+    background-color: var(--secondary-color);
+    padding: 0.5rem 0.2rem;
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+    box-shadow: var(--box-shadow-typ);
 }

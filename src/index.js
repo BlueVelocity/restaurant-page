@@ -12,7 +12,7 @@ document.querySelectorAll('.tab').forEach((element, index) => {
     element.addEventListener('click', () => {
         utility.clearChildrenByID('content');
         navBarFunctions[index]();
-        () => {
+        
         if (element.getAttribute('inactive') != 'true') {
             document.querySelectorAll('.tab').forEach(elem => {
                 elem.classList = 'tab';
@@ -21,4 +21,5 @@ document.querySelectorAll('.tab').forEach((element, index) => {
             element.classList = 'tab tab-selected';
             element.setAttribute('inactive', 'true');
         };
-}})});
+    });
+});

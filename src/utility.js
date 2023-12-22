@@ -1,8 +1,13 @@
-export default { appendElementByID, clearChildrenByID, randomSelection };
+export default { appendElementByID, appendInMemoryElement, clearChildrenByID, randomSelection };
 
-//Accepts an Id | string as fist argument, followed by the elements to append as child in array
+//Accepts an Id | string as first argument, followed by the elements to append as child in array
 function appendElementByID(Id, elements) {
     elements.forEach(element => document.getElementById(Id).appendChild(element))
+}
+
+//Accepts a stored parent element, followed by the elements to append as child in array
+function appendInMemoryElement(memElement, elements) {
+    elements.forEach(element => memElement.appendChild(element))
 }
 
 //takes in Id | string and clears innerHTML
