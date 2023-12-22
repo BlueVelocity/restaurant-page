@@ -179,7 +179,7 @@ h1 {
     color: var(--tertiary-color);
 
     font-size: 3rem;
-    margin: 1rem;
+    margin: 0 0 1rem 0;
 
     text-shadow: -0.05rem 0 var(--quaternary-color), 0 0.05rem var(--quaternary-color), 0.05rem 0 var(--quaternary-color), 0 -0.05rem var(--quaternary-color);
 }
