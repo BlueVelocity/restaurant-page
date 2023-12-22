@@ -220,7 +220,7 @@ h2 {
     height: 10rem;
 
     color: var(--secondary-color);
-    text-shadow: -0.05 0 black, 0 0.05 black, 0.05 0 black, 0 -0.05 black;
+    text-shadow: -0.05rem 0 black, 0 0.05rem black, 0.05rem 0 black, 0 -0.05rem black;
 
     border-radius: 0.5rem;
     margin-top: 2rem;
