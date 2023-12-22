@@ -66,7 +66,7 @@ table {
     --quaternary-color: rgb(129, 26, 26);
     --selection-color: #89982e;
     --hover-color: #a0b133;
-    --box-shadow-typ: grey 0.05rem 0.05rem 0.05rem;
+    --box-shadow-typ: grey 0.1rem 0.1rem 0.1rem;
     --width-standard: 25rem;
     font-size: min(2vh, 3vw);
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
@@ -199,7 +199,7 @@ h2 {
     margin: 1rem 0;
     
     color: var(--secondary-color);
-    text-shadow: -0.05rem 0 black, 0 0.05rem black, 0.05rem 0 black, 0 -0.05rem black;
+    text-shadow: -0.1rem 0 black, 0 0.1rem black, 0.1rem 0 black, 0 -0.1rem black;
 }
 
 .menu-list li {
@@ -220,7 +220,7 @@ h2 {
     height: 10rem;
 
     color: var(--secondary-color);
-    text-shadow: -0.05rem 0 black, 0 0.05rem black, 0.05rem 0 black, 0 -0.05rem black;
+    text-shadow: -0.1rem 0 black, 0 0.1rem black, 0.1rem 0 black, 0 -0.1rem black;
 
     border-radius: 0.5rem;
     margin-top: 2rem;
