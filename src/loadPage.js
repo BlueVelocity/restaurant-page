@@ -57,7 +57,7 @@ function landingComponent() {
     imageContainer.appendChild(titleImg);
 
     const headerElement = document.createElement('h1');
-    headerElement.textContent = 'Devil Diner';
+    headerElement.textContent = 'Devil\'s Diner';
 
     const descriptionElement = document.createElement('p');
     descriptionElement.textContent = utility.randomSelection(['This pasta will Mama your Mia!', 'You\'ve Mama\'d your last Mia', 'It\'s good pasta yo!', 'Arms are heavy...']);
